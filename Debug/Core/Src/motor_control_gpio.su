@@ -1,0 +1,7 @@
+motor_control_gpio.c:25:6:MotorControlGPIO_Init	32	static
+motor_control_gpio.c:85:6:MotorControlGPIOTest	4	static
+motor_control_gpio.c:90:6:StopMotorsGPIO	8	static
+motor_control_gpio.c:101:6:ForwardGPIO	8	static
+motor_control_gpio.c:112:6:ReverseGPIO	8	static
+motor_control_gpio.c:123:6:TurnLeftGPIO	8	static
+motor_control_gpio.c:134:6:TurnRightGPIO	8	static
