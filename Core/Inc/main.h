@@ -12,6 +12,10 @@ void SystemClockConfig(void);
 
 void GPIO_Init(void);
 
+void TIMER6_Init(void);
+
 void Error_handler(void);
+
+void hundredms_wt(int deciseconds);
 
 #endif /* INC_MAIN_H_ */
