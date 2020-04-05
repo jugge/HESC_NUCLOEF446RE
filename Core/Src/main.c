@@ -43,6 +43,12 @@ int main(void) {
 		hundredms_wt(10);
 		FULL_STOP();
 		hundredms_wt(10);
+
+
+		/* Try Udemys example */
+//		while ( ! (TIM6->SR & TIM_SR_UIF) );
+//		TIM6->SR = 0;
+//		printf("1");
 	}
 
 
@@ -80,7 +86,7 @@ void GPIO_Init(void){
 void TIMER6_Init(void){
 	htimer6.Instance = TIM6;
 	htimer6.Init.Prescaler = 24;
-	htimer6.Init.Period = 64000-1;
+	htimer6.Init.Period = 64-1;
 	if (HAL_TIM_Base_Init(&htimer6) != HAL_OK){
 		Error_handler();
 	}
@@ -94,8 +100,13 @@ void Error_handler(void) {
 
 
 void hundredms_wt(int deciseconds) {
-	for (int i=0;i<deciseconds;i++) {
-		while( ! (TIM6->SR & TIM_SR_UIF));
-		TIM6->SR = 0;
-	}
+//	for (int i=0;i<deciseconds;i++) {
+//		TIM6->SR = 0;
+//		while( ! (TIM6->SR & TIM_SR_UIF) );
+//		TIM6->SR = 0;
+//	}
+//
+/* Temporarily use the predefined delay to test the function with the kids */
+	HAL_Delay(deciseconds*100);
+
 }
